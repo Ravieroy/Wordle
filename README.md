@@ -1,5 +1,5 @@
 ## Wordle
----
+
 ### A python implementation for wordle solving.
 
 This is a python implementation of solving wordle which is available [here](https://www.nytimes.com/games/wordle/index.html) and the older puzzles are archived [here](https://www.devangthakkar.com/wordle_archive/?1)
