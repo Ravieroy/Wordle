@@ -41,7 +41,7 @@ def display_common_words(list_):
     """
     
     sorted_list = sorted_word_list(list_)
-    first_n_list = sorted_list[:15] # displays first 15 entries of the possible words
+    first_n_list = sorted_list[:15] #displays top 15 entries for the word
     for i in range(len(first_n_list)):
         word = first_n_list[i][0]
         weight = first_n_list[i][1]
