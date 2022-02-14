@@ -32,7 +32,7 @@ def sorted_word_list(list_):
         weight = get_weight(item)
         tmp_list = [item,weight]
         sorted_list.append(tmp_list)
-    return sorted(sorted_list, key=lambda x:x[1],reverse=False)
+    return sorted(sorted_list, key=lambda x:x[1],reverse=True)
 
 
 def display_common_words(list_):
@@ -41,8 +41,8 @@ def display_common_words(list_):
     """
     
     sorted_list = sorted_word_list(list_)
-    first_n_list = sorted_list
-    for i in range(len(sorted_list)):
+    first_n_list = sorted_list[:15] # displays first 15 entries of the possible words
+    for i in range(len(first_n_list)):
         word = first_n_list[i][0]
         weight = first_n_list[i][1]
         print(f"{word} : {weight:.3f}")
@@ -80,7 +80,7 @@ def input_response():
         if len(response) == word_length and set(response) <= {"G", "Y", "?"}:
             break
         else:
-            print(f"Error - invalid answer {response}")
+            print(f"Invalid response: {response}")
     return response
 
 
